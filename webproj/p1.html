@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Project</title>
+</head>
+<style type="text/css">
+	.one
+	{
+		position: relative;
+		width: 100%;
+		background-size: cover;
+	}
+	.three
+	{	
+		padding-bottom: 230px;
+		padding-top: 230px;
+	}
+	div
+	{
+		font-size: 40px;
+	}
+	input[type="button"]
+	{
+		font-size: 25px;
+		font-style: italic;
+		font-family: "Times New Roman";
+		padding: 10px;
+	}
+	img
+	{
+		background-size: 100%;
+	}
+	.centered
+	{
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	body
+	{
+		background-color: 
+	}
+	.container
+	{
+		position: relative;
+		width: 100%;
+	}
+	.image
+	{
+		opacity: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+	.middle
+	{
+		transition: .5s ease;
+		opacity: 3;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+	}
+	.container:hover.image
+	{
+		opacity: 0.3;
+		
+	}
+	.container:hover.middle
+	{
+		opacity: 1;
+	}
+	
+	
+</style>
+<body>
+<center>
+<div class="one" id="slide_bg">
+		<img name="slide"  src="img5.jpeg" style="width: 100%">
+		<div class="centered"><h1>ONLINE CROP INVENTORY</h1></div>
+		<a href="map.php"></div>
+		<input type="button" name="Show" value="Show"></a>
+	
+
+<div class="container">
+	<img src="img7.jpeg" class="image" style="width: 100%">
+	<div class="middle">
+		<input type="button" name="submit" value="Open">
+	</div>
+</div>
+<div class="three"> 
+	<h1>Types of Crops</h1>
+	<form>
+		<input type="button" name="paddy" value="Paddy">
+		<input type="button" name="kharif" value="Kharif">
+		<input type="button" name="rabi" value="Rabi">
+	</form>
+</div>
+</center>
+<script type="text/javascript">
+	var i=0;
+	var images=[];
+	var time=2000;
+	images[0]="img5.jpeg";
+	images[1]="img8.jpeg";
+	images[2]="img6.jpeg";
+	images[3]="img9.jpeg";
+
+	function imageSlide()
+	{
+		document.slide.src=images[i];
+		if(i<images.length-1)
+		{
+			i++;
+		}
+		else
+		{
+			i=0;
+		}
+		setTimeout("imageSlide()",time);
+	}
+	window.onload=imageSlide;
+</script>
+
+</body>
+</html>
